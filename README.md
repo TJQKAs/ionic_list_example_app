@@ -17,8 +17,8 @@ https://www.youtube.com/watch?v=tGDmUFBiUV0 - video which I used when made this 
 
 ## Getting started
 
-Web version - unavailble now
-Mobile version - unavailble now
+Web version - unavailble now <br>
+Mobile version - unavailble now <br>
 
 
 ##### Running locally
