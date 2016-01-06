@@ -25,6 +25,9 @@ Mobile version - unavailble now <br>
 
 ```
 git clone this repo
+npm update
+bower install
+npm install
 npm install -g ionic
 ionic serve --lab
 ```
