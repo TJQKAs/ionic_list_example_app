@@ -1,9 +1,9 @@
 
-Application with list of video courses of programming.
+### Application with list of video courses of programming.
 =======================
 
 
-## Description
+### Description
 
 Simple application based on Ionic, which gets some data from `json` file and represents the list of tutorials, with picture and description. You can reorder this list or delete some items.   
 https://www.youtube.com/watch?v=tGDmUFBiUV0 - video which I used when made this app.
@@ -15,7 +15,7 @@ https://www.youtube.com/watch?v=tGDmUFBiUV0 - video which I used when made this 
 <br>
 
 
-## Getting started
+### Getting started
 
 Web version - unavailble now <br>
 Mobile version - unavailble now <br>
@@ -30,7 +30,7 @@ ionic serve --lab
 ```
 
 
-## Technologies Used
+#### Technologies Used
 
 - Javascript
 - AngularJS
