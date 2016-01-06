@@ -1,25 +1,39 @@
-Ionic App Base
-=====================
 
-A starting project for Ionic that optionally supports using custom SCSS.
+Application with list of video courses of programming.
+=======================
 
-## Using this project
 
-We recommend using the [Ionic CLI](https://github.com/driftyco/ionic-cli) to create new Ionic projects that are based on this project but use a ready-made starter template.
+## Description
 
-For example, to start a new Ionic project with the default tabs interface, make sure the `ionic` utility is installed:
+Simple application based on Ionic, which gets some data from `json` file and represents the list of tutorials, with picture and description. You can reorder this list or delete some items.   
+https://www.youtube.com/watch?v=tGDmUFBiUV0 - video which I used when made this app.
 
-```bash
-$ npm install -g ionic
+
+![pic1](https://github.com/TJQKAs/ionic_list_example_app/blob/master/www/img/pic1.png=150)
+<br>
+![pic2](https://github.com/TJQKAs/ionic_list_example_app/blob/master/www/img/pic2.png=150)
+<br>
+
+
+## Getting started
+
+Web version - unavailble now
+Mobile version - unavailble now
+
+
+##### Running locally
+
+```
+git clone this repo
+npm install -g ionic
+ionic serve --lab
 ```
 
-Then run:
 
-```bash
-$ ionic start myProject tabs
-```
+## Technologies Used
 
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/getting-started) page and the [Ionic CLI](https://github.com/driftyco/ionic-cli) repo.
+- Javascript
+- AngularJS
+- Ionic
 
-## Issues
-Issues have been disabled on this repo, if you do find an issue or have a question consider posting it on the [Ionic Forum](http://forum.ionicframework.com/).  Or else if there is truly an error, follow our guidelines for [submitting an issue](http://ionicframework.com/submit-issue/) to the main Ionic repository.
+====================
