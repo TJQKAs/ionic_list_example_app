@@ -17,7 +17,7 @@ https://www.youtube.com/watch?v=tGDmUFBiUV0 - video which I used when made this 
 
 ### Getting started
 
-Web version - unavailble now <br>
+Web version - https://morning-inlet-5232.herokuapp.com <br>
 Mobile version - unavailble now <br>
 
 
