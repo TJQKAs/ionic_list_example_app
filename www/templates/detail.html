@@ -1,0 +1,18 @@
+<!-- our template which provides full details of the course -->
+<ion-header-bar class="bar-calm">
+  <h2 class="title">More information about the course</h2>
+</ion-header-bar>
+<ion-view>
+  <ion-content>
+    <ion-list class="list-inset">
+      <ion-item class="item-text-wrap" ng-repeat="item in courses | filter: {Title : whichcourse}">
+        <img ng-src="{{item.Thumbnails[1].FullURL}}" >
+        <h2>{{item.Title}}</h2>
+        <h2>ID:{{item.ID}}</h2>
+        <p><h3>Short description:{{item.Description}}</h3></p>
+        <h2>Duration:{{item.DurationInSeconds}}</h2>
+        <!-- <h2>Link:{{item["URLs"]}}</h2> -->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

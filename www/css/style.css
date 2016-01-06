@@ -1,0 +1,20 @@
+/* Empty. Add your own CSS if you like */
+/*when we click to star we change background color of item-content */
+.star>.item-content {
+  background-color: #f5d1ff !important;
+}
+.splash{
+  background: url(../img/images2.jpg) 
+  center center;
+  -webkit background-size: cover;
+  -moz background-size: cover;
+  -o background-size: cover;
+  background-size: cover;
+}
+.branding {
+  width: 50%;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+}

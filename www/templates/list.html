@@ -1,0 +1,42 @@
+
+<!-- our search bar below -->
+    <ion-header-bar class="bar-positive">
+      <!-- Here we add button and bind with the ng-click, showDelete which delete element in that case we can't call showReorder anymore  -->
+      <button class="button button-icon ion-trash-a" ng-click="data.showDelete = !data.showDelete; data.showReorder = false;"></button>
+      <h2 class="title">Collection of the courses</h2>
+      <!-- Here we add button and bind with the ng-click and showreorder which reorders the list, we can't delete this elems so (false)  -->
+      <button class="button button-icon ion-navicon" ng-click="data.showReorder = !data.showReorder; data.showDelete = false;"></button>
+    </ion-header-bar>
+    <div class="bar bar-subheader item-input-inset bar-calm">
+      <label class="item-input-wrapper">
+        <i class="icon ion-search placeholder-icon"></i>
+        <!-- we switch on our filter we bind filter with var query which will get meaning by input  -->
+        <input type="search" ng-model="query" placeholder="Search">
+      </label>
+    </div>
+    <!-- here we implement our controller to retrieve data from json -->
+    <ion-content class="has-subheader">
+      <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+      <!-- add directive to our list that activates this button, if it's true it shows the button -->
+  <ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+     <!-- here we set what we should repeat to each element in our json file -->
+                      <!-- conditional class change back ground after we perform toggleStar function -->
+    <ion-item ng-class="{'star' : item.star}" ng-repeat="item in courses | filter: query"
+    class="item-thumbnail-left item-icon-right item-text-wrap" href="#tab/list/{{item.Title}}">
+      <img ng-src="{{item.Thumbnails[0].FullURL}}" >
+      <h2>{{item.Title}}</h2>
+      <h2>ID:{{item.ID}}</h2>
+      <h2>Duration:{{item.DurationInSeconds}}</h2>
+      <!-- also we set limit size of description that should be showed us by 50 chars  -->
+      <!-- also if length of description more than 50 chars I want see ... -->
+      <p><h3>Short description:{{item.ShortDescription | limitTo: 50}}{{item.ShortDescription.length > 50 ? '&hellip;' : ''}}</h3></p>
+      <!-- create forms to put stars to course which we like -->
+      <button class="button button-clear icon ion-star button-assertive" ng-click="toggleStar(item)" ng-show="item.star"></button>
+      <ion-option-button class="button-calm" ng-click="toggleStar(item)"><i class="icon ion-star"></i></ion-option-button>
+      <!-- create button, button directive delete  when smbd clicks to item (so we should create onItemDelete fucntion) -->
+    <ion-delete-button class="ion-ios-trash" ng-click="onItemDelete(item)"></ion-delete-button>
+      <!-- create button, button directive we execute a function when smbd reorders courses (position of element in array) -->
+    <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
+    </ion-item>
+  </ion-list>
+    </ion-content>
